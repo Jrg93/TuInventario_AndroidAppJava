@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Aniadir_Producto"
+    android:background="@drawable/fondo_pantalla">
+
+
+    <TextView
+        android:id="@+id/txt_fondo"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/fondo_titulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_titulopro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="@string/a_adir_producto"
+        android:textColor="@android:color/white"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_codigopro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:text="@string/codigo"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txt_titulopro"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="@+id/txt_titulopro"
+        app:layout_constraintTop_toBottomOf="@+id/txt_titulopro" />
+
+    <TextView
+        android:id="@+id/txt_nombrepro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="@string/nombre"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txt_codigopro"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_codigopro"
+        app:layout_constraintTop_toBottomOf="@+id/txt_codigopro" />
+
+    <TextView
+        android:id="@+id/txt_preciopro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="@string/precio"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txt_descripcionpro"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_descripcionpro"
+        app:layout_constraintTop_toBottomOf="@+id/txt_descripcionpro" />
+
+    <TextView
+        android:id="@+id/txt_descripcionpro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/descripci_n"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txt_nombrepro"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_nombrepro"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nombrepro" />
+
+    <TextView
+        android:id="@+id/txt_cantidadpro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/cantidad"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txt_preciopro"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_preciopro"
+        app:layout_constraintTop_toBottomOf="@+id/txt_preciopro" />
+
+    <Button
+        android:id="@+id/btn_añadirpro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginBottom="120dp"
+        android:text="@string/a_adir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_cantidadpro"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_volverpro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="72dp"
+        android:layout_marginRight="72dp"
+        android:layout_marginBottom="120dp"
+        android:text="@string/volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_cantidadpro"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/scan_button"
+        android:layout_width="93dp"
+        android:layout_height="54dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/codigo_barras"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtxt_codigopro"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="48dp"
+        android:autofillHints=""
+        android:background="@drawable/background_edtext"
+        android:ems="10"
+        android:gravity="end"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_titulopro"
+        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintStart_toStartOf="@+id/txt_titulopro"
+        app:layout_constraintTop_toBottomOf="@+id/txt_titulopro"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/edtxt_nombrepro"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:autofillHints=""
+        android:background="@drawable/background_edtext"
+        android:ems="10"
+        android:gravity="end"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/edtxt_codigopro"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtxt_codigopro"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_codigopro"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/edtxt_descripcionpro"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="36dp"
+        android:autofillHints=""
+        android:background="@drawable/background_edtext"
+        android:ems="10"
+        android:gravity="end"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/edtxt_nombrepro"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtxt_nombrepro"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_nombrepro"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/edtxt_preciopro"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="44dp"
+        android:autofillHints=""
+        android:background="@drawable/background_edtext"
+        android:ems="10"
+        android:gravity="end"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/edtxt_descripcionpro"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtxt_descripcionpro"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_descripcionpro"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/edtxt_cantidadpro"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="36dp"
+        android:autofillHints=""
+        android:background="@drawable/background_edtext"
+        android:ems="10"
+        android:gravity="end"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/edtxt_preciopro"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtxt_preciopro"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_preciopro"
+        tools:ignore="LabelFor" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

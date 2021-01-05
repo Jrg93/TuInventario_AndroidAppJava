@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Act_Stock.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #629755; font-style: italic;}
+.s3 { color: #629755; font-weight: bold; font-style: italic;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Act_Stock.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.tuinventario</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">androidx.appcompat.app.AppCompatActivity</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">android.content.Intent</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.os.Bundle</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.view.View</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.widget.Button</span><span class="s0">;</span>
+
+
+<span class="s2">/**</span>
+ <span class="s2">* Clase Añadir productos, creada para ingresar productos de forma manual</span>
+ <span class="s2">*/</span>
+
+<span class="s0">public class </span><span class="s1">Act_Stock </span><span class="s0">extends </span><span class="s1">AppCompatActivity {</span>
+
+    <span class="s2">/**</span>
+     <span class="s2">* Declaracion de variables</span>
+     <span class="s2">* </span><span class="s3">@param </span><span class="s2">Button Botones disponibles en la pantalla de Actualizar stock.</span>
+     <span class="s2">*/</span>
+    <span class="s0">private </span><span class="s1">Button btn_volver</span><span class="s0">;</span>
+    
+    <span class="s1">@Override</span>
+    <span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState)</span><span class="s0">;</span>
+        <span class="s1">setContentView(R.layout.activity_act__stock)</span><span class="s0">;</span>
+
+        <span class="s2">/**</span>
+         <span class="s2">*Enlaces de recursos de la interfaz a la aplicacion</span>
+         <span class="s2">*/</span>
+        <span class="s1">btn_volver = (Button) findViewById(R.id.btn_volverpro)</span><span class="s0">;</span>
+
+        <span class="s2">/**</span>
+         <span class="s2">* Metodo para boton volver, al momento de presionar en el boton se ejecutara Intent</span>
+         <span class="s2">* lo que nos llevara a la activity asignada, en este caso a la activity Menu</span>
+         <span class="s2">*/</span>
+        <span class="s1">btn_volver.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">onClick(View v) {</span>
+                <span class="s1">Intent volver = </span><span class="s0">new </span><span class="s1">Intent(Act_Stock.</span><span class="s0">this, </span><span class="s1">Menu.</span><span class="s0">class</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">startActivity(volver)</span><span class="s0">;</span>
+            <span class="s1">}</span>
+        <span class="s1">})</span><span class="s0">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
